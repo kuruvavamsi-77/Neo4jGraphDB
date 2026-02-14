@@ -23,7 +23,7 @@ public class Neo4jMapper implements AutoCloseable {
     private static final String PROJECT_PATH = "D:\\Java-Backend\\DoctorAppointmentSystem\\DoctorAppointmentSystem\\src\\main\\java\\com\\OnlineDoctorAppointmentSystem\\DoctorAppointmentSystem";
     private static final String NEO4J_URI = "neo4j+s://7438c57f.databases.neo4j.io";
     private static final String NEO4J_USER = "neo4j";
-    private static final String NEO4J_PASSWORD = "X_jSQpDmNCS7m9yKAdaaJgKbzjVuEKqYgDGASUs-j-Q";
+    private static final String NEO4J_PASSWORD = "";
     // ============================================================
 
     private static final Pattern PACKAGE_PATTERN = Pattern.compile("package\\s+([\\w.]+);");
