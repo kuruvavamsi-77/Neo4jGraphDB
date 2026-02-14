@@ -1,0 +1,165 @@
+══════════════════════════════════════════════════════════════════════
+JAVA PROJECT ANALYSIS REPORT
+══════════════════════════════════════════════════════════════════════
+
+Project: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem
+Generated: Sat Feb 14 11:32:44 IST 2026
+
+SUMMARY
+──────────────────────────────────────────────────────────────────────
+Total Files: 23
+Total Classes: 23
+Total Methods: 82
+Total Fields: 29
+
+LAYER DISTRIBUTION
+──────────────────────────────────────────────────────────────────────
+Model          : 7
+Repository     : 5
+Service        : 5
+Controller     : 5
+Other          : 1
+
+
+CLASS DETAILS
+──────────────────────────────────────────────────────────────────────
+
+Repository Layer:
+----------------------------------------------------------------------
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.AppointmentRepo
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Repository\AppointmentRepo.java
+    Extends: JpaRepository<Appointment
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Appointment
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.DoctorRepo
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Repository\DoctorRepo.java
+    Annotations: Repository
+    Extends: JpaRepository<Doctor
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Doctor
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.PatientRepo
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Repository\PatientRepo.java
+    Extends: JpaRepository<Patient
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Patient
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.testRepo
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Repository\testRepo.java
+    Extends: JpaRepository<Student
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Student
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.UserRepo
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Repository\UserRepo.java
+    Annotations: Repository
+    Extends: JpaRepository<UserEntity
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.UserEntity
+
+Model Layer:
+----------------------------------------------------------------------
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Appointment
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Entity\Appointment.java
+    Annotations: Entity, Id, GeneratedValue
+    Methods (12): getId, setId, getDoctorId, setDoctorId, getPatientId...
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Doctor
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Entity\Doctor.java
+    Annotations: Entity, Id
+    Methods (10): getId, setId, getName, setName, getSpecialization...
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Patient
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Entity\Patient.java
+    Annotations: Entity, Id
+    Methods (10): getId, setId, getName, setName, getEmail...
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Student
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Entity\Student.java
+    Annotations: Entity, Id
+    Methods (8): getId, setId, getName, setName, getEmail...
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.UserEntity
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Entity\UserEntity.java
+    Annotations: Entity, Id, GeneratedValue
+    Methods (10): getId, setId, getName, setName, getEmail...
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Model.StudentRequest
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Model\StudentRequest.java
+    Methods (4): getUsername, setUsername, getPassword, setPassword
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Model.UserModel
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Model\UserModel.java
+    Methods (4): getEmail, setEmail, getPassword, setPassword
+
+Service Layer:
+----------------------------------------------------------------------
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.AppointmentService
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Services\AppointmentService.java
+    Annotations: Service, Autowired
+    Methods (4): bookAppointment, getAppointmentsById, deleteAppointmentById, getAppointmentByDoctorId
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Appointment, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.AppointmentRepo
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.DoctorService
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Services\DoctorService.java
+    Annotations: Service, Autowired
+    Methods (3): saveDoctor, getAllDoctors, getDoctorById
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Doctor, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.DoctorRepo
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.LoginService
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Services\LoginService.java
+    Annotations: Service, Autowired
+    Methods (1): login
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.UserEntity, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.UserRepo
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.PatientService
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Services\PatientService.java
+    Annotations: Service, Autowired, Autowired
+    Methods (2): getPatientById, updatePatient
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Patient, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.PatientRepo, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.UserRepo
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.RegisterService
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Services\RegisterService.java
+    Annotations: Service, Autowired
+    Methods (1): registerUser
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.UserEntity, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Model.UserModel, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Repository.UserRepo
+
+Controller Layer:
+----------------------------------------------------------------------
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Controller.AppointmentController
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Controller\AppointmentController.java
+    Annotations: RestController, CrossOrigin, Autowired, PostMapping, RequestBody, GetMapping, RequestParam, DeleteMapping, RequestParam, GetMapping, RequestParam
+    Methods (4): bookAppointment, getAppointmentsById, deleteAppointmentById, getAppointmentByDoctorId
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Appointment, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.AppointmentService
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Controller.AuthController
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Controller\AuthController.java
+    Annotations: RestController, CrossOrigin, Autowired, Autowired, PostMapping, RequestBody, PostMapping, RequestBody
+    Methods (2): Register, login
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.UserEntity, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Model.UserModel, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.LoginService, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.RegisterService
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Controller.demo
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Controller\demo.java
+    Annotations: RestController, GetMapping, PostMapping, RequestBody
+    Methods (1): testSql
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Model.StudentRequest
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Controller.DoctorController
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Controller\DoctorController.java
+    Annotations: RestController, CrossOrigin, Autowired, PostMapping, RequestBody, GetMapping, GetMapping, RequestParam
+    Methods (3): saveDoctor, getAllDoctors, getDoctorById
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Doctor, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.DoctorService
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Controller.PatientController
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\Controller\PatientController.java
+    Annotations: RestController, CrossOrigin, Autowired, PostMapping, PathVariable, RequestBody, GetMapping, RequestParam
+    Methods (2): updatePatient, getPatientById
+    Dependencies: com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Entity.Patient, com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.Services.PatientService
+
+Other Layer:
+----------------------------------------------------------------------
+
+  • com.OnlineDoctorAppointmentSystem.DoctorAppointmentSystem.DoctorAppointmentSystemApplication
+    File: D:\Java-Backend\DoctorAppointmentSystem\DoctorAppointmentSystem\src\main\java\com\OnlineDoctorAppointmentSystem\DoctorAppointmentSystem\DoctorAppointmentSystemApplication.java
+    Annotations: SpringBootApplication
+    Methods (1): main
